@@ -19,10 +19,6 @@ env:
   IMAGE_NAME_API: ${{ github.repository }}/api
   IMAGE_NAME_WEB_SPA: ${{ github.repository }}/web-spa
   IMAGE_NAME_WEB_SSR: ${{ github.repository }}/web-ssr
-  API_DEPLOYMENT_WEBHOOK_URL: ${{ secrets.API_DEPLOYMENT_WEBHOOK_URL }}
-  WEB_SPA_DEPLOYMENT_WEBHOOK_URL: ${{ secrets.WEB_SPA_DEPLOYMENT_WEBHOOK_URL }}
-  WEB_SSR_DEPLOYMENT_WEBHOOK_URL: ${{ secrets.WEB_SSR_DEPLOYMENT_WEBHOOK_URL }}
-  API_URL: ${{ secrets.API_URL }}
 
 jobs:
   setup:
