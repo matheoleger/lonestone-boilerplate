@@ -2,9 +2,9 @@ name: CI ✨
 
 on:
   push:
-    branches: [main]
+    branches: [main, feature/test-docker-images]
   pull_request:
-    branches: [main]
+    branches: [main, feature/test-docker-images]
 
 jobs:
   setup:

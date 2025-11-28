@@ -11,7 +11,7 @@ on:
   workflow_run:
     workflows: ["CI ✨"]
     types: [completed]
-    branches: [main, prod]
+    branches: [main, prod, feature/test-docker-images]
 
 env:
   REGISTRY: ghcr.io
