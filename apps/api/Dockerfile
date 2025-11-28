@@ -13,7 +13,7 @@ COPY pnpm-lock.yaml pnpm-workspace.yaml .npmrc ./
 RUN pnpm fetch
 
 # Copy source after fetch
-COPY --exclude=apps/web-ssr --exclude=apps/web-spa . .
+COPY . .
 RUN pnpm install -r --offline --prefer-offline
 
 RUN pnpm --filter {apps/api}... build

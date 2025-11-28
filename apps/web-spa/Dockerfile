@@ -18,7 +18,7 @@ COPY pnpm-lock.yaml pnpm-workspace.yaml .npmrc ./
 RUN pnpm fetch
 
 # Copy source after fetch
-COPY --exclude=apps/web-ssr --exclude=apps/api . .
+COPY . .
 RUN pnpm install -r --offline --prefer-offline
 
 # Build web-spa and its dependencies
