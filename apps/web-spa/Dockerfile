@@ -1,3 +1,4 @@
+# J'ajoute un commentaire afin de voir si le build n'est pas effectué lors d'une pull request
 # Stage 1: base
 FROM node:22.14-alpine AS base
 ENV PNPM_HOME="/pnpm"
