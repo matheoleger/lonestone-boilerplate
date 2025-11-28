@@ -10,15 +10,15 @@ WORKDIR /app
 FROM base AS builder
 
 # Define build arguments
-ARG API_URL
-ENV API_URL=${API_URL}
+ARG VITE_API_URL
+ENV VITE_API_URL=${VITE_API_URL}
 
 # pnpm fetch does require only lockfile
 COPY pnpm-lock.yaml pnpm-workspace.yaml .npmrc ./
 RUN pnpm fetch
 
 # Copy source after fetch
-COPY . .
+COPY --exclude=apps/web-spa --exclude=apps/api . .
 RUN pnpm install -r --offline --prefer-offline
 
 # Build web-ssr and its dependencies
